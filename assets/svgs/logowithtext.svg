@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1630.7457275391 536.1599731445" >
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1630.7457275391 536.1599731445">
   <defs>
     <filter id="null">
     <feBlend mode="normal" in="SourceGraphic"/>
@@ -9,9 +9,9 @@
         fill: #32363F;
       }
       body.dark-mode .logotext {
-        fill: $FFFFF5
+        fill: #FFFFF5;
       }
-      
+
       .e, .l {
         fill: #32363F;
       }

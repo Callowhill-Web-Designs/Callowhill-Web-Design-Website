@@ -473,10 +473,6 @@
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
   }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it white */
-    filter: grayscale(1) brightness(1000%);
-  }
   body.dark-mode #cs-navigation .cs-line {
     background-color: #fff;
   }
@@ -582,10 +578,6 @@
 @media only screen and (min-width: 64rem) {
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
-  }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it turn white */
-    filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
