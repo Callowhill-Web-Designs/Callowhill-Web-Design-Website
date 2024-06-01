@@ -1,156 +1,309 @@
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #hero-81 {
-    /* Centers button */
-    text-align: center;
-    /* 144px - 300px - leaving extra space for the navigation */
-    padding: clamp(9rem, 25.95vw, 18.75rem) 1rem 0;
-    /* 130px - 450px */
-    padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
-    position: relative;
-    z-index: 1;
-    /* Prevents white rectangle pseudos from overlapping the sections below */
-    overflow: hidden;
+  @keyframes floatAnimation {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-2rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
   }
-  #hero-81:before {
-    /* Left side of the triangle */
-    content: '';
-    width: 31.25rem;
-    /* make really long so it covers the whole screen all the way to desktop */
-    height: 250rem;
-    background: #fff;
-    opacity: 1;
-    transform: rotate(-67deg);
-    transform-origin: center;
-    position: absolute;
-    display: block;
-    bottom: -139.6875rem;
-    /* this makes the right edge sit at the 50% line at all times */
-    right: 50%;
-    z-index: 0;
+  @keyframes floatAnimation2 {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-3rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
   }
-  #hero-81:after {
-    /* Right side of the triangle */
-    content: '';
-    width: 31.25rem;
-    height: 250rem;
-    background: #fff;
-    opacity: 1;
-    transform: rotate(67deg);
-    transform-origin: center;
-    position: absolute;
-    display: block;
-    bottom: -139.6875rem;
-    /* this makes the left edge sit at the 50% line at all times */
-    left: 50%;
-    z-index: 0;
+  #hero-1349 {
+      /* 250px - 500px - leaving extra space for the navigation */
+      padding: clamp(13rem, 20vw, 25rem) 1rem 0;
+      /* 200px - 250px */
+      padding-bottom: clamp(12.5rem, 16.5vw, 15.625rem);
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
   }
-  #hero-81 .cs-background {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -2;
+  #hero-1349:before {
+      /* Overlay */
+      content: "";
+      width: 100%;
+      height: 30%;
+      background: -webkit-linear-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#000000),
+          to(rgba(0, 0, 0, 0))
+      );
+      background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(
+          to bottom,
+          #000000 0%,
+          rgba(0, 0, 0, 0) 100%
+      );
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      /* prevents the cursor from interacting with it */
+      pointer-events: none;
   }
-  #hero-81 .cs-background:before {
-    /* Overlay */
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: .7;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
+  #hero-1349 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
   }
-  #hero-81 .cs-background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  #hero-1349 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      max-width: 39.375rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
   }
-  #hero-81 .cs-container {
-    width: 100%;
-    max-width: 67.5rem;
-    margin: auto;
+  #hero-1349 .cs-topper {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      text-align: inherit;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: #e8e8e8;
+      margin-bottom: 0.5rem;
+      display: block;
   }
-  #hero-81 .cs-title {
-    /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-    font-weight: 700;
-    line-height: 1.2em;
-    text-align: center;
-    max-width: 51.8125rem;
-    /* 16px - 24px */
-    margin: 0 auto clamp(1rem, 4vw, 1.5rem);
-    color: #fff;
-    position: relative;
+  #hero-1349 .cs-title {
+      /* 39px - 61px */
+      font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+      font-weight: 700;
+      line-height: 1.2em;
+      text-align: inherit;
+      max-width: 20ch;
+      margin: 0 0 1rem 0;
+      color: #fff;
+      position: relative;
   }
-  #hero-81 .cs-title:after {
-    /* Divider Line */
-    content: '';
-    /* 60px - 100px */
-    width: clamp(3.75rem, 9.5vw, 6.25rem);
-    /* 4px - 8px */
-    height: clamp(0.25rem, 0.8vw, 0.5rem);
-    /* 16px - 24px */
-    margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-    background: var(--primary);
-    opacity: 1;
-    position: relative;
-    display: block;
+  #hero-1349 .cs-text {
+      font-size: 1.25rem;
+      line-height: 1.5em;
+      text-align: inherit;
+      width: 100%;
+      /* 464px - 622px */
+      max-width: clamp(29rem, 60vw, 38.785rem);
+      margin: 0 0 2.5rem 0;
+      color: #e8e8e8;
   }
-  #hero-81 .cs-text {
-    /* 16px - 25px */
-    font-size: clamp(1rem, 1.95vw, 1.5625rem);
-    line-height: 1.5em;
-    text-align: center;
-    width: 100%;
-    /* 464px - 800px */
-    max-width: clamp(29rem, 60vw, 50rem);
-    margin: 0 auto;
-    /* 40px - 48px */
-    margin-bottom: clamp(2.5rem, 4vw, 3rem);
-    color: #fff;
+
+  #hero-1349 .cs-button-solid:before {
+      background: #fff;
+  }
+
+  #hero-1349 .cs-bubbles {
+      /* this scales the children inside of it down. They're all in ems so they pull from the parent font size for their value of em, in this case, the value of em is tied to the viewwidth size and stops growing when the font size is equal to 1em, which it pulls from the nearst parent with a declred font size (which is the html tag, and that tag is 16px by default) */
+      font-size: min(2vw, 0.5em);
+      position: absolute;
+      z-index: -1;
+  }
+  #hero-1349 .cs-bubbles1 {
+      width: 42.5em;
+      height: 45.25em;
+      right: -11.875rem;
+      /* changes to 172 at large desktop */
+      top: 0;
+  }
+  #hero-1349 .cs-bubbles1:before {
+      /* white border bubble */
+      content: "";
+      width: 38.875em;
+      height: 38.875em;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      animation-name: floatAnimation;
+      animation-duration: 7s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #hero-1349 .cs-bubbles1:after {
+      /* orange bubble */
+      content: "";
+      width: 34.125em;
+      height: 34.125em;
+      background: var(--primary);
+      opacity: 0.8;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 10s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #hero-1349 .cs-bubbles2 {
+      width: 20.625rem;
+      height: 29.75rem;
+      /* changes to 160px at larger desktop */
+      left: -13.75rem;
+      /* removed at larger desktop */
+      bottom: -16.25rem;
+  }
+  #hero-1349 .cs-bubbles2:before {
+      /* white border bubble */
+      content: "";
+      width: 20.625rem;
+      height: 20.625rem;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 0;
+      animation-name: floatAnimation;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #hero-1349 .cs-bubbles2:after {
+      /* orange bubble */
+      content: "";
+      width: 16.25rem;
+      height: 16.25rem;
+      background: var(--primary);
+      opacity: 0.8;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 2.5rem;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 14s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #hero-1349 .cs-background {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+  }
+  #hero-1349 .cs-background:before {
+      /* Overlay */
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.4;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      /* prevents the cursor from interacting with it */
+      pointer-events: none;
+  }
+  #hero-1349 .cs-background img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      /* makes the top of the image start at the top of the parent */
+      object-position: top;
   }
 }
-/* Desktop - 1300px (To make image background parallax) */
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #hero-1349 .cs-container {
+      align-items: flex-start;
+  }
+  #hero-1349 .cs-content {
+      text-align: left;
+      align-items: flex-start;
+  }
+  #hero-1349 .cs-bubbles {
+      font-size: 1em;
+  }
+  #hero-1349 .cs-bubbles1 {
+      /* changes to auto at large desktop */
+      right: -26.75rem;
+  }
+}
+/* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-  #hero-81 {
-    background: url("https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* makes the parallax effect */
-    background-attachment: fixed;
-  }
-  #hero-81 .cs-background img {
-    display: none;
+  #hero-1349 .cs-bubbles1 {
+      /* 200px - 450px */
+      margin-left: clamp(12.5rem, 20vw, 28.125rem);
+      top: 10.75rem;
+      right: auto;
+      left: 50%;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #hero-81:before,
-  body.dark-mode #hero-81:after {
-    background: var(--dark);
+/* Large Desktop Parallax Effect - 1600px */
+@media only screen and (min-width: 100rem) {
+  #hero-1349 .cs-background {
+      background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/on-computer.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
   }
-  body.dark-mode #hero-81 .cs-background:before {
-    opacity: .85;
+  #hero-1349 .cs-background img {
+      display: none;
   }
 }
+/* Larger Desktop - 1800px */
+@media only screen and (min-width: 112.5rem) {
+  #hero-1349 .cs-bubbles2 {
+      margin-right: 50rem;
+      right: 50%;
+      left: auto;
+      top: 13.125rem;
+      bottom: auto;
+  }
+}
+
 /*-- -------------------------- -->
-<---         Services           -->
+<---       Top Services         -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -231,7 +384,7 @@
     max-width: 80rem;
     /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
                to make the value negative since clamp doesn't work with negative values */
-    margin-top: calc(clamp(4.75rem, 20vw, 20rem)*-1);
+    margin-top: calc(clamp(4.75rem, 8vw, 20rem)*-1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,660 +410,653 @@
     color: #fff;
   }
 }
+
 /*-- -------------------------- -->
-<---          About Us          -->
+<---        Why Choose          -->
 <--- -------------------------- -*/
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #RPsbs-580 .cs-container,
-  #RPsbsr-580 .cs-container {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 7vw, 4rem);
+  @keyframes floatAnimation {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-2rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
   }
-  #RPsbs-580 .cs-content,
-  #RPsbsr-580 .cs-content {
-    /* set text aling to left if content needs to be left aligned */
-    text-align: left;
-    width: 100%;
-    max-width: 32.625rem;
-    /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
-    padding: var(--sectionPadding);
-    padding-top: 0;
-    /* prevents padding from affecting width and height */
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
+  @keyframes floatAnimation2 {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-3rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
   }
-  #RPsbs-580 .cs-text,
-  #RPsbsr-580 .cs-text {
-    /* Override. */
-    margin-bottom: 1rem;
+  #why-choose-1371 {
+      padding: var(--sectionPadding);
+      position: relative;
+      overflow: visible;
+      z-index: 1;
   }
-  #RPsbs-580 .cs-text:last-of-type,
-  #RPsbsr-580 .cs-text:last-of-type {
-    margin-bottom: 2rem;
+  #why-choose-1371 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
   }
-  #RPsbs-580 .cs-picture,
-  #RPsbsr-580 .cs-picture {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 18.75rem;
+  #why-choose-1371 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
   }
-  #RPsbs-580 .cs-picture img,
-  #RPsbsr-580 .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  #why-choose-1371 .cs-topper {
+      font-size: var(--topperFontSize);
+      line-height: 1.2em;
+      text-transform: uppercase;
+      text-align: inherit;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+      display: block;
+  }
+  #why-choose-1371 .cs-title {
+      font-size: var(--headerFontSize);
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: inherit;
+      max-width: 43.75rem;
+      margin: 0 0 1rem 0;
+      color: var(--headerColor);
+      position: relative;
+  }
+  #why-choose-1371 .cs-text {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      text-align: inherit;
+      width: 100%;
+      max-width: 40.625rem;
+      margin: 0;
+      color: var(--bodyTextColor);
+  }
+  #why-choose-1371 .cs-title {
+      max-width: 23ch;
+  }
+  #why-choose-1371 .cs-text {
+      max-width: 52.5rem;
+      margin-bottom: 1rem;
+  }
+  #why-choose-1371 .cs-text:last-of-type {
+      margin-bottom: 0rem;
+  }
+  #why-choose-1371 .cs-text strong {
+      color: var(--headerColor);
+  }
+  #why-choose-1371 .cs-item-picture {
+      list-style: none;
+      width: 100%;
+      grid-column: span 12;
+      position: relative;
+  }
+  #why-choose-1371 .cs-picture {
+      width: 100%;
+      height: 26.125rem;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      z-index: 1;
+  }
+  #why-choose-1371 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  #why-choose-1371 .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      align-items: stretch6;
+      gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #why-choose-1371 .cs-item {
+      list-style: none;
+      /* 16px - 24px */
+      padding: clamp(1rem, 3vw, 1.5rem);
+      /* prevents padding from affecting height and width */
+      box-sizing: border-box;
+      background-color: #f7f7f7;
+      border-radius: 1rem;
+      border: 1px solid #e8e8e8;
+      display: flex;
+      grid-column: span 12;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: background-color 0.3s;
+  }
+  #why-choose-1371 .cs-item:hover {
+      background-color: var(--primary);
+  }
+  #why-choose-1371 .cs-item:hover .cs-h3,
+  #why-choose-1371 .cs-item:hover .cs-item-text {
+      color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1371 .cs-item:hover .cs-item-text {
+      opacity: 0.8;
+  }
+  #why-choose-1371 .cs-item:hover .cs-h3-icon {
+      filter: grayscale(1) brightness(1000%);
+  }
+  #why-choose-1371 .cs-h3 {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      color: var(--headerColor);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0.5rem;
+      transition: color 0.3s;
+  }
+  #why-choose-1371 .cs-h3-icon {
+      width: 1.5rem;
+      height: auto;
+      margin-top: 2px;
+      display: block;
+  }
+  #why-choose-1371 .cs-item-text {
+      font-size: 0.875rem;
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColor);
+      transition:
+          color 0.3s,
+          opacity 0.3s;
+  }
+  #why-choose-1371 .cs-bubbles1 {
+      width: 26.1875rem;
+      height: 26.6875rem;
+      position: absolute;
+      left: -16.25rem;
+      top: -15rem;
+      z-index: -2;
+  }
+  #why-choose-1371 .cs-bubbles1:before {
+      /* white border bubble */
+      content: "";
+      width: 20.625rem;
+      height: 20.625rem;
+      background: transparent;
+      border: 1px solid #1a1a1a;
+      border-radius: 50%;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      animation-name: floatAnimation;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #why-choose-1371 .cs-bubbles1:after {
+      /* orange bubble */
+      content: "";
+      width: 16.25rem;
+      height: 16.25rem;
+      background: var(--primary);
+      opacity: 0.1;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -2;
+      animation-name: floatAnimation2;
+      animation-duration: 14s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #why-choose-1371 .cs-bubbles2 {
+      width: 26.1875rem;
+      height: 26.6875rem;
+      display: block;
+      position: absolute;
+      /* changes to 160px at larger desktop */
+      right: -11.25rem;
+      bottom: -8.75rem;
+      z-index: -2;
+  }
+  #why-choose-1371 .cs-bubbles2:before {
+      /* white border bubble */
+      content: "";
+      width: 20.625rem;
+      height: 20.625rem;
+      background: transparent;
+      border: 1px solid #1a1a1a;
+      border-radius: 50%;
+      opacity: 1;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      animation-name: floatAnimation;
+      animation-duration: 7s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+  }
+  #why-choose-1371 .cs-bubbles2:after {
+      /* orange bubble */
+      content: "";
+      width: 16.25rem;
+      height: 16.25rem;
+      background: var(--primary);
+      opacity: 0.1;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      animation-name: floatAnimation2;
+      animation-duration: 9s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #RPsbs-580,
-  #RPsbsr-580 {
-    padding: var(--sectionPadding);
-  }
-  #RPsbs-580 .cs-container,
-  #RPsbsr-580 .cs-container {
-    flex-direction: row;
-    justify-content: flex-start;
-    /* 60px - 128px */
-    gap: clamp(3.75rem, 10vw, 8rem);
-  }
-  #RPsbs-580 .cs-content,
-  #RPsbsr-580 .cs-content {
-    width: 53%;
-    /* reset the padding, add the section padding back to the section container */
-    padding: 0;
-  }
-  #RPsbs-580 .cs-picture,
-  #RPsbsr-580 .cs-picture {
-    width: 47vw;
-    max-width: 30.875rem;
-    /* 518px - 700px */
-    height: clamp(32.375rem, 63vw, 43.75rem);
-    /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
-    margin: 0 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem);
-    position: relative;
-  }
-  #RPsbs-580 .cs-picture:before,
-  #RPsbsr-580 .cs-picture:before {
-    /* yellow box */
-    content: '';
-    width: 50%;
-    height: 60%;
-    background: var(--secondary);
-    opacity: 1;
-    display: block;
-    position: absolute;
-    /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
-    bottom: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
-    left: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+  #why-choose-1371 .cs-item {
+      grid-column: span 4;
   }
 }
-/*-- -------------------------- -->
-<---     Service Highlight      -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #RPsbsr-580 {
-    background-color: #f7f7f7;
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-choose-1371 .cs-item-picture {
+      grid-column: 4 / span 6;
+      grid-row: 1 / span 3;
+  }
+  #why-choose-1371 .cs-picture {
+      height: 100%;
+  }
+  #why-choose-1371 .cs-item {
+      grid-column: span 2;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(1) {
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(2) {
+      grid-column: 1 / span 3;
+      grid-row: 2 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(3) {
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(5) {
+      grid-column: 10 / span 3;
+      grid-row: 1 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(6) {
+      grid-column: 10 / span 3;
+      grid-row: 2 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(7) {
+      grid-column: 10 / span 3;
+      grid-row: 3 / span 1;
+  }
+  #why-choose-1371 .cs-bubbles1 {
+      left: -8.125rem;
+      top: -9.375rem;
   }
 }
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #RPsbsr-580 .cs-container {
-    justify-content: flex-end;
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+  #why-choose-1371 .cs-bubbles1 {
+      margin-right: 40.625rem;
+      left: auto;
+      right: 50%;
   }
-  #RPsbsr-580 .cs-content {
-    /* sends it to the left in the first position */
-    order: -1;
-  }
-  #RPsbsr-580 .cs-picture {
-    /* 16px - 28px, added margin left and bottom to cs-picture so it pushes away by the same amount the yellow box element overlaps it left and bottom. This maintains consistent spacing left and bottom */
-    margin: 0 clamp(1rem, 2.4vw, 1.75rem) clamp(1rem, 2.4vw, 1.75rem) 0;
-  }
-  #RPsbsr-580 .cs-picture:before {
-    /* yellow box */
-    content: '';
-    width: 50%;
-    height: 60%;
-    background: var(--secondary);
-    opacity: 1;
-    display: block;
-    position: absolute;
-    left: auto;
-    /* 16px - 28px, wrapped in calc function to multiple by negative 1 and get a negative clamp value */
-    bottom: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
-    right: calc(clamp(1rem, 2.4vw, 1.75rem)*-1);
+  #why-choose-1371 .cs-bubbles2 {
+      margin-left: 37.5rem;
+      left: 50%;
+      right: auto;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #RPsbsr-580 {
-    background-color: rgba(0, 0, 0, 0.2);
+  body.dark-mode #why-choose-1371 .cs-title,
+  body.dark-mode #why-choose-1371 .cs-text,
+  body.dark-mode #why-choose-1371 .cs-item-text {
+      color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #why-choose-1371 .cs-text strong {
+      color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #why-choose-1371 .cs-text,
+  body.dark-mode #why-choose-1371 .cs-item-text {
+      opacity: 0.8;
+  }
+  body.dark-mode #why-choose-1371 .cs-item {
+      background-color: rgba(15, 15, 15, 0.8);
+      border-color: rgba(100, 100, 100, 0.8);
+  }
+  body.dark-mode #why-choose-1371 .cs-item:hover {
+      background-color: var(--primary);
+  }
+  body.dark-mode #why-choose-1371 .cs-h3 {
+      color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #why-choose-1371 .cs-bubbles2:before {
+    border: 1px solid #FFFFFF;
+  } 
+  body.dark-mode #why-choose-1371 .cs-bubbles1:before {
+    border: 1px solid #FFFFFF;
   }
 }
+
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #gallery-453 {
-    /* centers the inline-block button */
-    text-align: center;
-    padding: var(--sectionPadding);
+  @keyframes floatAnimation {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-2rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
   }
-  #gallery-453 .cs-container {
-    width: 100%;
-    /* changes to 1280px at tablet */
-    max-width: 34.375rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-    position: relative;
+  @keyframes floatAnimation2 {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-3rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
   }
-  #gallery-453 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: left;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
+  #gallery-1374 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+      /* Prevents overflow from the image going off screen */
+      overflow: hidden;
   }
-  #gallery-453 .cs-button-group {
-    width: 100%;
-    max-width: 37.5rem;
-    margin: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+  #gallery-1374 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
   }
-  #gallery-453 .cs-button {
-    font-size: 1rem;
-    line-height: 1.5em;
-    padding: 0 0 0 1rem;
-    color: var(--bodyTextColor);
-    background-color: transparent;
-    border: none;
-    position: relative;
-    transition: color .3s;
+  #gallery-1374 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
   }
-  #gallery-453 .cs-button:before {
-    content: '';
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background: var(--primary);
-    /* starting value, this will animate to 1 when the button is hovered, and when the active class is on it */
-    opacity: 0;
-    /* prevents mouse from interacting with it */
-    pointer-events: none;
-    position: absolute;
-    display: block;
-    top: 50%;
-    /* start -20px left of the button */
-    left: -1.25rem;
-    transform: translateY(-50%);
-    /* transition to and from the active class styles on hover*/
-    transition: opacity .3s, left .3s;
+
+  #gallery-1374 .cs-topper {
+      color: var(--primary);
   }
-  #gallery-453 .cs-button:hover {
-    color: var(--primary);
-    cursor: pointer;
+  #gallery-1374 .cs-image-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: 1fr;
+      /* 16px - 60px */
+      gap: clamp(1rem, 4.3vw, 3.75rem);
   }
-  #gallery-453 .cs-button:hover:before {
-    left: 0;
-    opacity: 1;
+  #gallery-1374 .cs-link {
+      text-decoration: none;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
   }
-  #gallery-453 .cs-button.cs-active {
-    /* when the button is active, add these styles to the button and its pseudo */
-    font-weight: 700;
-    color: var(--primary);
+  #gallery-1374 .cs-item {
+      list-style: none;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      grid-column: span 12;
   }
-  #gallery-453 .cs-button.cs-active:before {
-    /* animate to these values when the cs-active class is added to the button and on hover */
-    left: 0;
-    opacity: 1;
+  #gallery-1374 .cs-item:hover .cs-h3,
+  #gallery-1374 .cs-item:hover .cs-desc {
+      color: #fff;
   }
-  #gallery-453 .cs-gallery {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    /* 48px - 64px */
-    margin-bottom: clamp(3rem, 3vw, 4rem);
-    opacity: 1;
-    visibility: visible;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    left: 0;
-    /* 16px - 20px */
-    gap: clamp(1rem, 1vw, 1.25rem);
-    transition: transform .7s, opacity .3s, visibility .5s, top .3s, left .3s;
-    /* makes the transfrom scaling orgin the top left corner, dictates the direction by which the scale transforms animate towards */
-    transform-origin: left top;
+  #gallery-1374 .cs-item:hover .cs-item-text {
+      background-color: var(--primary);
   }
-  #gallery-453 .cs-gallery.cs-hidden {
-    /* by using visibility:hidden instead of display:none, we can see the animations from the opacity and transforms, display:none won't render animations. */
-    visibility: hidden;
-    /* prevents the mouse from interacting with it */
-    pointer-events: none;
-    /* hidden galleries have a 0 opacity, and we animate the opacity to 1 when they become active */
-    opacity: 0;
-    /* this top and left value help control the animation, by setting it to position absolute and left 0, the gallery won't fly off screen to the left, it will stop its position to be at the left edge of the .cs-container (left: 0). Same for the bottom:0 value, the gallery won't go past that posiiton when it animates */
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    /* prevents the hidden galleries from overflowing the section, and makes a nice animations to transition to and from */
-    transform: scaleY(0) scaleX(0);
+  #gallery-1374 .cs-item:hover .cs-icon-wrapper {
+      border-color: #fff;
   }
-  #gallery-453 .cs-gallery.cs-hidden .cs-image {
-    /* when gallery is hidden, add these styles to the cs-image to animate from when cs-hidden is removed from the .cs-gallery */
-    transform: translateY(2.1875rem);
-    opacity: 0;
+  #gallery-1374 .cs-item:hover .cs-icon {
+      filter: brightness(1000%) grayscale(1);
   }
-  #gallery-453 .cs-image {
-    width: clamp(47%, 42.5vw, 48.5%);
-    /* changes at tablet */
-    aspect-ratio: 0.72985782;
-    /* clips the image corners */
-    overflow: hidden;
-    display: block;
-    position: relative;
-    /* when .cs-hidden is removed from the .cs-gallery, reset these values and animate from their hidden styles */
-    transform: translateY(0rem);
-    opacity: 1;
-    transition: opacity .6s, transform .6s;
+  #gallery-1374 .cs-picture {
+      width: 100%;
+      /* 344px - 420px */
+      height: clamp(21.5rem, 30vw, 26.25rem);
+      margin: auto;
+      border-radius: 1.5rem;
+      display: block;
+      position: relative;
+      overflow: hidden;
   }
-  #gallery-453 .cs-image:nth-of-type(1) {
-    /* these delays stagger the reveal of each image so they all go one after the other and not all at once */
-    transition-delay: .15s;
+  #gallery-1374 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
   }
-  #gallery-453 .cs-image:nth-of-type(2) {
-    transition-delay: .3s;
+  #gallery-1374 .cs-item-text {
+      /* 16px - 20px top & bottom, 16px - 40px left & right */
+      padding: clamp(1rem, 2vw, 1.25rem) clamp(1rem, 2.8vw, 2.5rem);
+      background-color: #f7f7f7;
+      border-radius: 1rem;
+      border: 1px solid #e8e8e8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* makes the item text the element that grows to fill the container */
+      flex-grow: 1;
+      gap: 1rem;
+      transition: background-color 0.3s;
   }
-  #gallery-453 .cs-image:nth-of-type(3) {
-    transition-delay: .45s;
+  #gallery-1374 .cs-flex {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
   }
-  #gallery-453 .cs-image:nth-of-type(4) {
-    transition-delay: .6s;
+  #gallery-1374 .cs-h3 {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
+      line-height: 1.2em;
+      text-align: left;
+      margin: 0;
+      color: #1a1a1a;
+      transition: color 0.3s;
   }
-  #gallery-453 .cs-image:nth-of-type(5) {
-    transition-delay: .75s;
+  #gallery-1374 .cs-desc {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.2vw, 1rem);
+      line-height: 1.5em;
+      color: #1a1a1a;
+      transition: color 0.3s;
   }
-  #gallery-453 .cs-image:nth-of-type(6) {
-    transition-delay: .9s;
+  #gallery-1374 .cs-icon-wrapper {
+      width: 3rem;
+      height: 3rem;
+      border: 1px solid #bababa;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* prevents the parent flexbox from shrinking the icon */
+      flex-shrink: 0;
+      transition: border-color 0.3s;
   }
-  #gallery-453 .cs-image:nth-of-type(7) {
-    transition-delay: 1.05s;
+  #gallery-1374 .cs-icon {
+      width: auto;
+      height: 0.75rem;
+      transition: filter 0.3s;
   }
-  #gallery-453 .cs-image:nth-of-type(8) {
-    transition-delay: 1.20s;
+  #gallery-1374 .cs-button-solid {
+      font-size: 1rem;
+      font-weight: 700;
+      /* 46px - 56px */
+      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+      text-align: center;
+      text-decoration: none;
+      min-width: 9.375rem;
+      margin: 0;
+      /* prevents padding from adding to the width */
+      box-sizing: border-box;
+      overflow: hidden;
+      padding: 0 1.5rem;
+      color: #fff;
+      background-color: var(--primary);
+      border-radius: 3rem;
+      display: inline-block;
+      position: relative;
+      z-index: 1;
   }
-  #gallery-453 .cs-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* makes it act like a background image */
-    object-fit: cover;
+  #gallery-1374 .cs-button-solid:before {
+      content: "";
+      width: 0%;
+      height: 100%;
+      background: #000;
+      opacity: 1;
+      border-radius: 0.25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: width 0.3s;
+  }
+  #gallery-1374 .cs-button-solid:hover:before {
+      width: 100%;
+  }
+  #gallery-1374 .cs-bubbles {
+      width: 25.9375rem;
+      height: 34.125rem;
+      position: absolute;
+      right: -10.25rem;
+      bottom: -2.875rem;
+      z-index: -1;
+  }
+  #gallery-1374 .cs-bubbles:before {
+      /* white border bubble */
+      content: "";
+      width: 21.3125rem;
+      height: 21.3125rem;
+      background: transparent;
+      opacity: 1;
+      border: 1px solid #1a1a1a;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation-name: floatAnimation;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+  }
+  #gallery-1374 .cs-bubbles:after {
+      /* orange bubble */
+      content: "";
+      width: 21.3125rem;
+      height: 21.3125rem;
+      background: var(--primary);
+      opacity: 0.1;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 14s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
   }
 }
-/* Tablet - 600px */
-@media only screen and (min-width: 48rem) {
-  #gallery-453 .cs-container {
-    max-width: 80rem;
-  }
-  #gallery-453 .cs-content {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  #gallery-453 .cs-flex {
-    width: 50%;
-  }
-  #gallery-453 .cs-title {
-    margin: 0;
-  }
-  #gallery-453 .cs-button-group {
-    width: auto;
-  }
-  #gallery-453 .cs-gallery {
-    justify-content: space-between;
-  }
-  #gallery-453 .cs-image {
-    /* 171px - 305px */
-    width: clamp(10.6875rem, 23.3%, 19.0625rem);
-    aspect-ratio: 0.71529412;
+/* In Between - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #gallery-1374 .cs-item {
+      grid-column: span 6;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #gallery-453 .cs-title,
-  body.dark-mode #gallery-453 .cs-text,
-  body.dark-mode #gallery-453 .cs-button {
-    color: var(--bodyTextColorWhite);
+  body.dark-mode #gallery-1374 .cs-title,
+  body.dark-mode #gallery-1374 .cs-text,
+  body.dark-mode #gallery-1374 .cs-desc,
+  body.dark-mode #gallery-1374 .cs-h3 {
+      color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #gallery-453 .cs-title.cs-active,
-  body.dark-mode #gallery-453 .cs-text.cs-active,
-  body.dark-mode #gallery-453 .cs-button.cs-active {
-    color: var(--secondary);
+  body.dark-mode #gallery-1374 .cs-desc,
+  body.dark-mode #gallery-1374 .cs-text {
+      opacity: 0.8;
   }
-}
-/*-- -------------------------- -->
-<---       Meet The Team        -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #meet-team-221 {
-    padding: var(--sectionPadding);
-    background: #F1F1F4;
+  body.dark-mode #gallery-1374 .cs-item-text {
+    background-color: rgba(15, 15, 15, 0.8);
+    border-color: rgba(100, 100, 100, 0.8);
   }
-  #meet-team-221 .cs-container {
-    width: 100%;
-    /* changes to 1280px at tablet */
-    max-width: 34.375rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-  #meet-team-221 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-  }
-  #meet-team-221 .cs-picture {
-    /* 160px - 220px */
-    width: clamp(10rem, 20vw, 13.75rem);
-    height: clamp(10rem, 20vw, 13.75rem);
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    display: block;
-    position: relative;
-    /* clips the corners off the image tag */
-    overflow: hidden;
-  }
-  #meet-team-221 .cs-picture img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /* Makes image behave like a background image */
-    object-fit: cover;
-    transition: transform .7s;
-  }
-  #meet-team-221 .cs-card-group {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  #meet-team-221 .cs-item {
-    list-style: none;
-    /* Changes on tablet */
-    width: 100%;
-    max-width: 21.25rem;
-    /* 16px - 20px */
-    padding: clamp(1rem, 2vw, 1.25rem);
-    padding-bottom: 1.25rem;
-    background: var(--bodyTextColorWhite);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* prevents padding from adding to height and width */
-    box-sizing: border-box;
-  }
-  #meet-team-221 .cs-item:hover .cs-picture img {
-    transform: scale(1.1);
-  }
-  #meet-team-221 .cs-name {
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    color: var(--headerColor);
-    display: block;
-  }
-  #meet-team-221 .cs-job-title {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
-    color: var(--primary);
-    display: block;
-  }
-  #meet-team-221 .cs-item-text {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-align: center;
-    margin: 0;
-    margin-bottom: 0.75rem;
-    color: #7D799C;
-  }
-  #meet-team-221 .cs-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  #meet-team-221 .cs-link {
-    /* 28px - 32px */
-    width: clamp(1.75rem, 3vw, 2rem);
-    /* 28px - 32px */
-    height: clamp(1.75rem, 3vw, 2rem);
-    /* After making the a tag into a box, we center the image inside of it */
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* creates the 3D space for the 3D effect when spinning */
-    transform-style: preserve-3d;
-    perspective: 700px;
-  }
-  #meet-team-221 .cs-link:hover .cs-icon {
-    transform: translateY(-0.3125rem) rotateY(360deg);
-  }
-  #meet-team-221 .cs-icon {
-    width: 0.875rem;
-    height: auto;
-    transition: transform .7s;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #meet-team-221 .cs-container {
-    max-width: 80em;
-  }
-  #meet-team-221 .cs-card-group {
-    flex-direction: row;
-  }
-  #meet-team-221 .cs-item {
-    width: 31%;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #meet-team-221 {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  body.dark-mode #meet-team-221 .cs-title,
-  body.dark-mode #meet-team-221 .cs-text,
-  body.dark-mode #meet-team-221 .cs-name,
-  body.dark-mode #meet-team-221 .cs-item-text,
-  body.dark-mode #meet-team-221 .cs-job-title {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #meet-team-221 .cs-item {
-    background-color: var(--medium);
-  }
-  body.dark-mode #meet-team-221 .cs-item-text {
-    opacity: .8;
-  }
-  body.dark-mode #meet-team-221 .cs-icon {
-    /* turns icons white */
-    filter: grayscale(1) brightness(1000%);
-  }
-}
-/*-- -------------------------- -->
-<---          Reviews           -->
-<--- -------------------------- -*/
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #reviews-727 {
-    padding: var(--sectionPadding);
-  }
-  #reviews-727 .cs-container {
-    width: 100%;
-    /* changes to 1280px at tablet */
-    max-width: 34.375rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* 48px - 64px */
-    gap: clamp(3rem, 6vw, 4rem);
-  }
-  #reviews-727 .cs-content {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-  }
-  #reviews-727 .cs-title {
-    /* cs-title override */
-    max-width: 20ch;
-  }
-  #reviews-727 .cs-card-group {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-  }
-  #reviews-727 .cs-item {
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    /* 32px - 48px top & bottom */
-    /* 16px - 32px left & right */
-    padding: clamp(2rem, 7vw, 3rem) clamp(1rem, 4vw, 2rem);
-    /* makes padding not affect height and width */
-    box-sizing: border-box;
-    background-color: #F0F0F0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  #reviews-727 .cs-icon {
-    /* 30px - 40px */
-    width: clamp(1.875rem, 4vw, 2.5rem);
-    height: auto;
-    margin: 0 0 2rem 0;
-    display: block;
-  }
-  #reviews-727 .cs-h3 {
-    /* 20px - 25px */
-    font-size: clamp(1.25rem, 4vw, 1.5625rem);
-    line-height: 1.2em;
-    font-weight: 700;
-    margin: 0 0 1.5rem 0;
-    color: var(--headerColor);
-  }
-  #reviews-727 .cs-item-text {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 4vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 3rem 0;
-    color: var(--bodyTextColor);
-  }
-  #reviews-727 .cs-name {
-    font-size: 1.25rem;
-    line-height: 1.2em;
-    font-weight: 500;
-    margin: auto 0 0 0;
-    color: var(--headerColor);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-  }
-  #reviews-727 .cs-name:before {
-    content: '';
-    width: 0.5rem;
-    height: 1px;
-    background: currentColor;
-    display: block;
-    position: relative;
-  }
-}
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #reviews-727 .cs-container {
-    max-width: 80rem;
-  }
-  #reviews-727 .cs-card-group {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  #reviews-727 .cs-item {
-    width: 48.5%;
-  }
-}
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #reviews-727 .cs-title,
-  body.dark-mode #reviews-727 .cs-text,
-  body.dark-mode #reviews-727 .cs-h3,
-  body.dark-mode #reviews-727 .cs-item-text,
-  body.dark-mode #reviews-727 .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #reviews-727 .cs-text {
-    opacity: .8;
-  }
-  body.dark-mode #reviews-727 .cs-item {
-    background-color: var(--medium);
-  }
-}
+  body.dark-mode #gallery-1374 .cs-bubbles:before {
+    border: 1px solid #FFFFFF;
+  } 
+}                       
+
 /*-- -------------------------- -->
 <---            CTA             -->
 <--- -------------------------- -*/
@@ -940,7 +1086,7 @@
     align-items: center;
   }
   #cta-51 .cs-topper {
-    color: var(--secondary);
+    color: var(--primary);
   }
   #cta-51 .cs-title,
   #cta-51 .cs-text {
@@ -971,7 +1117,7 @@
     height: 100%;
     width: 100%;
     background: #000;
-    opacity: .8;
+    opacity: .7;
     top: 0;
     left: 0;
     z-index: 1;
@@ -984,4 +1130,8 @@
     width: 100%;
     object-fit: cover;
   }
+  #cta-51 .cs-button-solid:before {
+    background: #fff;
+  }
 }
+                    

@@ -6,9 +6,6 @@
     </filter>
     <style>
       .logotext {
-        fill: #32363F;
-      }
-      body.dark-mode .logotext {
         fill: #FFFFF5;
       }
 
