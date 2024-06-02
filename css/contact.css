@@ -352,7 +352,7 @@
       border: none;
   }
   #contact-1388 .cs-submit:hover {
-      color: #fff;
+      color: var(--primary);
       cursor: pointer;
   }
 }
@@ -426,6 +426,9 @@
   body.dark-mode #contact-1388 .cs-graphic {
       opacity: 0.4;
   }
+  body.dark-mode #contact-1388 .cs-button-solid:before {
+    background: #fff;
+}
 }
 
                               
