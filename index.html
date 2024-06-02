@@ -8,27 +8,27 @@
     <!--Swap our for actual link-->
     <link rel="canonical" href="https://zade0123.github.io/Callowhill-Web-Design-Website/">
 
-    <meta name="description" content="Meta description for the page">
-    <meta name="keywords" content="">
+    <meta name="description" content="Professional website design and development solutions for small businesses. We offer a comprehensive suite of services to help simplify your business operations and ensure an effective digital presence.">
+    <meta name="keywords" content="small business web designer usa, small business web developer usa, web developer near me usa, affordable web design usa, affordable business website usa, 
+    web design agency usa, affordable web design agency for small businesses, custom web development usa, web design ageency, web design services usa, website designing compnay usa">
 
     <!--Social Media Display-->
-    <meta property="og:title" content="Title that shows up on google searches"/>
-    <meta property="og:description" content="Meta description for the page"/>
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="Official link for that page (https://www.site.com)"/>
-    <meta property="og:image" content="assets/images/social.jpg"/>
-    <meta property="og:image:secure_url" content="assets/images/social.jpg"/>
+    <meta property="og:title" content="Callowhill Web Designs"/>
+    <meta property="og:description" content="Professional website design and development solutions for small businesses"/>
+    <meta property="og:type" content="Small Business Web Design + Development" />
+    <meta property="og:url" content="https://zade0123.github.io/Callowhill-Web-Design-Website/"/>
+    <meta property="og:image" content="assets/images/frontpagesocials.png"/>
+    <meta property="og:image:secure_url" content="assets/images.frontpagesocials.png"/>
 
     <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png?v1">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/callowhilldesignslogo180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/callowhilldesignslogo32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/callowhilldesignslogo16.png">
     <link rel="manifest" href="assets/favicons/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
     <!-- Preload -->
-    <link rel="preload" as="image" href="">
     <link rel="preload" as="font" type="font/woff2" href="assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
 
@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
 
-    <title>Service Keyword Phrase | Company Name | City, State</title>
+    <title>Website Design | Callowhill Web Design | Philadelphia, PA</title>
 </head>
 <body>
     <!--Screen reader skip main nav-->
@@ -432,7 +432,7 @@
                     <p class="cs-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis at sit pellentesque molestie.  Diam, adipiscing ultrices eu turpis gravida.
                     </p>
-                    <a href="/contact.html" class="cs-button-solid">Get A Free Quote</a>
+                    <a href="contact.html" class="cs-button-solid">Get A Free Quote</a>
                 </div>
             </div>
             <!-- Background Image-->
@@ -564,53 +564,8 @@
             </div>
         </div>
     </footer>
-                                
 
     <script defer src="assets/js/nav.js"></script>
 
-    <!--Gallery JS-->
-    <script>
-        class CS_GalleryFilter {
-            filtersSelector = '.cs-button'
-            galleriesSelector = '.cs-gallery'
-            activeClass = 'cs-active'
-            hiddenClass = 'cs-hidden'
-
-            constructor() {
-                this.$galleries = document.querySelectorAll(this.galleriesSelector)
-                const $filters = document.querySelectorAll(this.filtersSelector)
-
-                this.onClick($filters[0])
-
-                for (const $filter of $filters) {
-                    $filter.addEventListener('click', () => this.onClick($filter))
-                }
-            }
-
-            onClick($filter) {
-                this.filter($filter.dataset.filter)
-
-                const { activeClass } = this
-
-                this.$activeFilter?.classList.remove(activeClass)
-                $filter.classList.add(activeClass)
-
-                this.$activeFilter = $filter
-            }
-
-            filter(filter) {
-                const showAll = filter == 'all'
-                const { hiddenClass } = this
-
-                for (const $gallery of this.$galleries) {
-                    const show = showAll || $gallery.dataset.category == filter
-                    $gallery.classList.toggle(hiddenClass, !show)
-                }
-            }
-        }
-
-        new CS_GalleryFilter()
-                                
-    </script>
 </body>
 </html>
