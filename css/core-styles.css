@@ -106,7 +106,7 @@
     display: block;
   }
   body.dark-mode .cs-topper {
-    color: var(--secondary);
+    color: var(--primary);
   }
   .cs-title {
     font-size: var(--headerFontSize);
