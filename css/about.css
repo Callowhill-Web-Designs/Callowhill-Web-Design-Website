@@ -90,6 +90,291 @@
   }
 }
 /*-- -------------------------- -->
+<---        Recent Posts        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-2rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  @keyframes floatAnimation2 {
+      0% {
+          transform: translateY(0);
+      }
+      50% {
+          transform: translateY(-3rem);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  #meet-team-1367 {
+      padding: var(--sectionPadding);
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+  }
+  #meet-team-1367 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+  }
+  #meet-team-1367 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+  }
+  #meet-team-1367 .cs-topper {
+      font-size: var(--topperFontSize);
+      font-weight: 700;
+      line-height: 1.2em;
+      text-align: inherit;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25rem;
+      color: var(--primary);
+      display: block;
+  }
+  #meet-team-1367 .cs-title {
+      font-size: var(--headerFontSize);
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: inherit;
+      max-width: 43.75rem;
+      margin: 0 0 1rem 0;
+      color: var(--headerColor);
+      position: relative;
+  }
+  #meet-team-1367 .cs-text {
+      font-size: var(--bodyFontSize);
+      line-height: 1.5em;
+      text-align: inherit;
+      width: 100%;
+      max-width: 40.625rem;
+      margin: 0;
+      color: var(--bodyTextColor);
+  }
+  #meet-team-1367 .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      justify-items: center;
+      align-items: stretch;
+      grid-template-columns: repeat(12, 1fr);
+      /* 16px - 20px */
+      gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #meet-team-1367 .cs-item {
+      list-style: none;
+      width: 100%;
+      max-width: 25.8125rem;
+      display: flex;
+      flex-direction: column;
+      grid-column: span 12;
+  }
+  #meet-team-1367 .cs-item:hover .cs-link {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  #meet-team-1367 .cs-item:hover .cs-info {
+      color: #fff;
+      background-color: var(--secondary);
+  }
+  #meet-team-1367 .cs-picture-wrapper {
+      /* 12px - 20px */
+      margin-bottom: clamp(0.75rem, 4vw, 1.25rem);
+      position: relative;
+  }
+  #meet-team-1367 .cs-picture {
+      margin: 0 auto;
+      border-radius: 50%;
+      display: block;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+  }
+  #meet-team-1367 .cs-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  #meet-team-1367 .cs-info {
+      text-align: center;
+      /* 16px - 24px */
+      padding: clamp(1rem, 1.7vw, 1.5rem);
+      background-color: #f7f7f7;
+      border-radius: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* makes the info boxes grow when the items aren't matching heights */
+      flex-grow: 1;
+      transition: background-color 0.3s;
+  }
+  #meet-team-1367 .cs-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin: 0;
+      margin: 0 0 0.25rem;
+      gap: 1rem;
+      transition: color 0.3s;
+  }
+  #meet-team-1367 .cs-job {
+      transition: color 0.3s;
+  }
+  #meet-team-1367 .cs-social {
+      display: flex;
+      gap: 0.5rem;
+      position: absolute;
+      right: 50%;
+      bottom: 1.5rem;
+      z-index: 1;
+      transform: translateX(50%);
+  }
+  #meet-team-1367 .cs-link {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: #fff;
+      opacity: 0;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(1rem);
+      transition:
+          transform 0.3s,
+          opacity 0.3s;
+  }
+  #meet-team-1367 .cs-link:hover .cs-icon {
+      width: 1.375rem;
+      height: auto;
+      /* use this pen to generate a filter from black to a color of your choosing */
+      /* https://codepen.io/sosuke/pen/Pjoqqp */
+      filter: invert(55%) sepia(42%) saturate(4845%) hue-rotate(337deg)
+          brightness(101%) contrast(98%);
+  }
+  #meet-team-1367 .cs-link:first-of-type,
+  #meet-team-1367 .cs-link:last-of-type {
+      margin-top: -1.25rem;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(1) {
+      transition-delay: 0.05s;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(2) {
+      transition-delay: 0.1s;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(3) {
+      transition-delay: 0.15s;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(4) {
+      transition-delay: 0.2s;
+  }
+  #meet-team-1367 .cs-bubbles {
+      width: 22.3125rem;
+      height: 29.375rem;
+      display: none;
+      position: absolute;
+      top: 3.1875rem;
+      left: -13.4375rem;
+      z-index: -1;
+  }
+  #meet-team-1367 .cs-bubbles:before {
+      /* white border bubble */
+      content: "";
+      width: 18.375rem;
+      height: 18.375rem;
+      background: transparent;
+      opacity: 1;
+      border: 1px solid #1a1a1a;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation-name: floatAnimation;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+  }
+  #meet-team-1367 .cs-bubbles:after {
+      /* orange bubble */
+      content: "";
+      width: 18.375rem;
+      height: 18.375rem;
+      background: var(--secondary);
+      opacity: 0.1;
+      border-radius: 50%;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      animation-name: floatAnimation2;
+      animation-duration: 14s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-1367 .cs-item {
+      grid-column: span 4;
+  }
+  #meet-team-1367 .cs-bubbles {
+      display: block;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #meet-team-1367 .cs-bubbles {
+      margin-left: -66.375rem;
+      left: 50%;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #meet-team-1367 .cs-topper {
+      color: var(--primaryLight);
+  }
+  body.dark-mode #meet-team-1367 .cs-title,
+  body.dark-mode #meet-team-1367 .cs-text {
+      color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #meet-team-1367 .cs-text,
+  body.dark-mode #meet-team-1367 .cs-job {
+      opacity: 0.8;
+  }
+  body.dark-mode #meet-team-1367 .cs-info {
+      background-color: var(--medium);
+  }
+}
+
+                              
+/*-- -------------------------- -->
 <---       Why Choose Us        -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
