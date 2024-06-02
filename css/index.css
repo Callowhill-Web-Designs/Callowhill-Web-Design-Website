@@ -248,7 +248,7 @@
       width: 100%;
       object-fit: cover;
       /* makes the top of the image start at the top of the parent */
-      object-position: top;
+      object-position: right top;
   }
 }
 /* Tablet - 768px */
@@ -266,6 +266,16 @@
   #hero-1349 .cs-bubbles1 {
       /* changes to auto at large desktop */
       right: -26.75rem;
+  }
+  #hero-1349 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* makes the top of the image start at the top of the parent */
+    object-position: top;
   }
 }
 /* Large Desktop - 1300px */
