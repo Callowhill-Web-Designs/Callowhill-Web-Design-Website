@@ -170,92 +170,221 @@
         <!--                   Banner                     -->
         <!-- ============================================ -->
 
-        <div id="banner-712">
+        <div id="banner-1400">
             <div class="cs-container">
                 <span class="cs-int-title">Pricing</span>
+                <div class="cs-breadcrumbs">
+                    <a href="" class="cs-link">Home</a>
+                    <a href="" class="cs-link cs-active">Pricing</a>
+                </div>
             </div>
             <!--Background Image-->
             <picture class="cs-background">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fpills.jpg" alt="pills" width="1280" height="568" aria-hidden="true">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people-laughing.jpg" alt="people laughing" width="1280" height="568" aria-hidden="true">
             </picture>
         </div>
 
         <!-- ============================================ -->
-        <!--                   Gallery                    -->
+        <!--                 Side By Side                 -->
         <!-- ============================================ -->
 
-        <section id="gallery-48">
+        <section id="sbs-1360">
+            <div class="cs-container">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer1.jpg" alt="meeting" width="305" height="339">
+                </picture>
+                <div class="cs-content">
+                    <span class="cs-topper">About Company</span>
+                    <h2 class="cs-title">We're delighted to provide excellent customer service</h2>
+                    <h3 class="cs-h3">
+                        We’re committed to delivering the best digital 
+                        marketing for businesses
+                    </h3>
+                    <p class="cs-text">
+                        There are many variations of passages of Lorem Ipsumavailable, but the majority have suffered alteration in someform, simply free text by injected humour, or randomised.
+                    </p>
+                    <a href="" class="cs-button-solid">Discover More</a>
+                </div>
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/computer2.jpg" alt="meeting" width="305" height="339">
+                </picture>
+            </div>
+            <!--
+                Since we cant use overflow:hidden on the section container to clip the bubbles when they overflow the edges we need to make a wrapper around the bubbles that are the same dimensions as the section container and add overflow: hidden to that element. We need to see the images overflow the section container, so this is the solution to that problem. 
+            
+            -->
+            <div class="cs-wrapper">
+                <div class="cs-bubbles" aria-hidden="true"></div>
+            </div>
+        </section>
+                                        
+
+        <!-- ============================================ -->
+        <!--                   Pricing                    -->
+        <!-- ============================================ -->
+
+        <section id="pricing-1385">
             <div class="cs-container">
                 <div class="cs-content">
-                    <span class="cs-topper">Pricing</span>
-                    <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-                </div>
-                <div class="cs-image-group">
-                    <div class="cs-row cs-row-1">
-                        <!-- Row 1-->
-                        <picture class="cs-picture cs-picture-1">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port1-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port1.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port1.jpg" alt="new hallway" width="420" height="567">
-                        </picture>
-                        <picture class="cs-picture cs-picture-2">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port4-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port4.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port4.jpg" alt="new home construction" width="420" height="630">
-                        </picture>
-                        <picture class="cs-picture cs-picture-3">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port7-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port7.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port7.jpg" alt="building a new wall" width="420" height="512">
-                        </picture>
-                        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    </div>
-                    <!-- Row 2 -->
-                    <div class="cs-row cs-row-2">
-                        <picture class="cs-picture cs-picture-1">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port2-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port2.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port2.jpg" alt="new kitchen" width="420" height="492">
-                        </picture>
-                        <picture class="cs-picture cs-picture-2">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port5-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port5.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port5.jpg" alt="apartment addition" width="420" height="517">
-                        </picture>
-                        <picture class="cs-picture cs-picture-3">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port8-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port8.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                        </picture>
-                        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    </div>
-                    <!-- Row 3 -->
-                    <div class="cs-row cs-row-3">
-                        <picture class="cs-picture cs-picture-1">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port3-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port3.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port3.jpg" alt="new black window structure" width="420" height="625">
-                        </picture>
-                        <picture class="cs-picture cs-picture-2">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port6-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port6.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                        </picture>
-                        <picture class="cs-picture cs-picture-3">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port9-m.jpg">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port9.jpg">
-                            <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                        </picture>
-                        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+                    <span class="cs-topper">Our Pricing</span>
+                    <h2 class="cs-title">Flexible Pricing Plans for Your Tailored Needs</h2>
+                    <p class="cs-text">
+                        In the new era of technology we look in the future with certainty and for any post types, or just they are so much great of all to a program.
+                    </p>
+                    <div class="cs-toggle-group">
+                        <span id="cs-option1-1385" class="cs-plan">Monthly</span>
+                        <div class="cs-toggle" aria-label="click to switch plans pricing">
+                            <span aria-hidden="true" class="cs-toggle-switch"></span>
+                        </div>
+                        <span id="cs-option2-1385" class="cs-plan">Lifetime</span>
                     </div>
                 </div>
+                <ul class="cs-card-group cs-option1">
+                    <li class="cs-item">
+                        <div class="cs-flex">
+                            <span class="cs-package">Basic Pack</span>
+                            <span class="cs-price">
+                                $250
+                                <span class="cs-duration">/Month</span>
+                            </span>
+                            <div class="cs-tag">
+                                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                                Hot Deal
+                            </div>
+                        </div>
+                        <ul class="cs-ul">
+                            <li class="cs-li">Mobile-Optimized</li>
+                            <li class="cs-li">Free Custom Domain</li>
+                            <li class="cs-li cs-disabled">Best Hosting</li>
+                            <li class="cs-li cs-disabled">Outstanding Support</li>
+                            <li class="cs-li cs-disabled">Dynamic Components</li>
+                        </ul>
+                        <a href="" class="cs-button-transparent">Get Now</a>
+                    </li>
+                    <li class="cs-item cs-popular">
+                        <div class="cs-flex">
+                            <span class="cs-package">Standard Pack</span>
+                            <span class="cs-price">
+                                $350
+                                <span class="cs-duration">/Month</span>
+                            </span>
+                            <div class="cs-tag">
+                                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                                Recommended
+                            </div>
+                        </div>
+                        <ul class="cs-ul">
+                            <li class="cs-li">Mobile-Optimized</li>
+                            <li class="cs-li">Free Custom Domain</li>
+                            <li class="cs-li">Best Hosting</li>
+                            <li class="cs-li cs-disabled">Outstanding Support</li>
+                            <li class="cs-li cs-disabled">Dynamic Components</li>
+                        </ul>
+                        <a href="" class="cs-button-transparent">Get Now</a>
+                    </li>
+                    <li class="cs-item">
+                        <div class="cs-flex">
+                            <span class="cs-package">Custom Pack</span>
+                            <span class="cs-price">
+                                $400+
+                                <span class="cs-duration">/Month</span>
+                            </span>
+                            <div class="cs-tag">
+                                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                                Hot Deal
+                            </div>
+                        </div>
+                        <ul class="cs-ul">
+                            <li class="cs-li">Mobile-Optimized</li>
+                            <li class="cs-li">Free Custom Domain</li>
+                            <li class="cs-li">Best Hosting</li>
+                            <li class="cs-li">Outstanding Support</li>
+                            <li class="cs-li">Dynamic Components</li>
+                        </ul>
+                        <a href="" class="cs-button-transparent">Learn More</a>
+                    </li>
+                </ul>
+                <ul class="cs-card-group cs-option2">
+                    <li class="cs-item">
+                        <div class="cs-flex">
+                            <span class="cs-package">Basic Pack</span>
+                            <span class="cs-price">
+                                $3k
+                                <span class="cs-duration"></span>
+                            </span>
+                            <div class="cs-tag">
+                                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                                Hot Deal
+                            </div>
+                        </div>
+                        <ul class="cs-ul">
+                            <li class="cs-li">Mobile-Optimized</li>
+                            <li class="cs-li">Free Custom Domain</li>
+                            <li class="cs-li cs-disabled">Best Hosting</li>
+                            <li class="cs-li cs-disabled">Outstanding Support</li>
+                            <li class="cs-li cs-disabled">Dynamic Components</li>
+                        </ul>
+                        <a href="" class="cs-button-transparent">Get Now</a>
+                    </li>
+                    <li class="cs-item cs-popular">
+                        <div class="cs-flex">
+                            <span class="cs-package">Standard Pack</span>
+                            <span class="cs-price">
+                                $5k
+                                <span class="cs-duration">/Month</span>
+                            </span>
+                            <div class="cs-tag">
+                                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                                Popular
+                            </div>
+                        </div>
+                        <ul class="cs-ul">
+                            <li class="cs-li">Mobile-Optimized</li>
+                            <li class="cs-li">Free Custom Domain</li>
+                            <li class="cs-li">Best Hosting</li>
+                            <li class="cs-li cs-disabled">Outstanding Support</li>
+                            <li class="cs-li cs-disabled">Dynamic Components</li>
+                        </ul>
+                        <a href="" class="cs-button-transparent">Get Now</a>
+                    </li>
+                    <li class="cs-item">
+                        <div class="cs-flex">
+                            <span class="cs-package">Corporate Pack</span>
+                            <span class="cs-price">
+                                $6k+
+                                <span class="cs-duration">/Month</span>
+                            </span>
+                            <div class="cs-tag">
+                                <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                                Hot Deal
+                            </div>
+                        </div>
+                        <ul class="cs-ul">
+                            <li class="cs-li">Mobile-Optimized</li>
+                            <li class="cs-li">Free Custom Domain</li>
+                            <li class="cs-li">Best Hosting</li>
+                            <li class="cs-li">Outstanding Support</li>
+                            <li class="cs-li">Dynamic Components</li>
+                        </ul>
+                        <a href="" class="cs-button-transparent">Learn More</a>
+                    </li>
+                </ul>
             </div>
-        </section>                   
+        </section>
                                 
+                                         
         <!-- ============================================ -->
         <!--                     CTA                      -->
         <!-- ============================================ -->
@@ -264,20 +393,21 @@
             <div class="cs-container">
                 <div class="cs-content">
                     <span class="cs-topper">Contact Us</span>
-                    <h2 class="cs-title">Get It Done With Us Today</h2>
+                    <h2 class="cs-title">Get In Touch!</h2>
                     <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis at sit pellentesque molestie.  Diam, adipiscing ultrices eu turpis gravida.
+                        We would love the opportunity to discuss how Callowhill Web Designs can help empower your business.
                     </p>
-                    <a href="" class="cs-button-solid">Gret A Free Quote</a>
+                    <a href="contact.html" class="cs-button-solid">Get A Free Quote</a>
                 </div>
             </div>
             <!-- Background Image-->
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets-m.jpg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets.jpg">
-                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/cabinets.jpg" alt="cabinets" width="1920" height="1280" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="assets/images/phillyskyline600.jpg">
+                <source media="(min-width: 601px)" srcset="assets/images/phillyskyline1080.jpg">
+                <source media="(min-width: 1081px)" srcset="assets/images/phillyskyline1440.jpg">
+                <img loading="lazy" decoding="async" src="assets/images/phillyskyline1440.jpg" alt="cabinets" width="1920" height="1280" aria-hidden="true">
             </picture>
-        </section>                                          
+        </section>                                           
     </main>
 
     <!-- ============================================ -->
@@ -402,5 +532,33 @@
                                 
 
     <script defer src="assets/js/nav.js"></script>
+    <script>
+        const leftOption = document.querySelector("#pricing-1385 #cs-option1-1385");
+        const rightOption = document.querySelector("#pricing-1385 #cs-option2-1385");
+        const togglePrice = document.querySelector("#pricing-1385 .cs-toggle");
+        const cardGroup = Array.from(document.querySelectorAll('#pricing-1385 .cs-card-group'))
+        // when you click the middle toggle
+        togglePrice.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.toggle("cs-active");
+            }
+            togglePrice.classList.toggle("active");
+        });       
+        // when you click the left button option
+        leftOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.remove("cs-active");
+            }
+            togglePrice.classList.remove("active");
+        });    
+        // when you click the right button option
+        rightOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.add("cs-active");
+            }
+            togglePrice.classList.add("active");
+        });
+                                
+    </script>
 </body>
 </html>

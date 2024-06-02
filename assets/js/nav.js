@@ -59,4 +59,3 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
     update()
     
     $btn.addEventListener('click', toggle)
-                                    
