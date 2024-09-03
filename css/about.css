@@ -665,7 +665,9 @@
       width: 100%;
       margin: 0;
       padding: 0;
-      display: grid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       justify-items: center;
       align-items: stretch;
       grid-template-columns: repeat(12, 1fr);
@@ -833,6 +835,7 @@
 @media only screen and (min-width: 48rem) {
   #meet-team-1367 .cs-item {
       grid-column: span 4;
+      justify-content: center;
   }
   #meet-team-1367 .cs-bubbles {
       display: block;
