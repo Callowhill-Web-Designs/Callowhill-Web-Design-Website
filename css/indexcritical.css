@@ -1,0 +1,422 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-2rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-3rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    #hero-1349 {
+        /* 250px - 500px - leaving extra space for the navigation */
+        padding: clamp(13rem, 20vw, 25rem) 1rem 0;
+        /* 200px - 250px */
+        padding-bottom: clamp(12.5rem, 16.5vw, 15.625rem);
+        box-sizing: border-box;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    #hero-1349:before {
+        /* Overlay */
+        content: "";
+        width: 100%;
+        height: 30%;
+        background: -webkit-linear-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#000000),
+            to(rgba(0, 0, 0, 0))
+        );
+        background: -o-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(
+            to bottom,
+            #000000 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        /* prevents the cursor from interacting with it */
+        pointer-events: none;
+    }
+    #hero-1349 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    #hero-1349 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: 39.375rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+    #hero-1349 .cs-topper {
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: #e8e8e8;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    #hero-1349 .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 700;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 20ch;
+        margin: 0 0 1rem 0;
+        color: #fff;
+        position: relative;
+    }
+    #hero-1349 .cs-text {
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        /* 464px - 622px */
+        max-width: clamp(29rem, 60vw, 38.785rem);
+        margin: 0 0 2.5rem 0;
+        color: #e8e8e8;
+    }
+  
+    #hero-1349 .cs-button-solid:before {
+        background: #fff;
+    }
+  
+    #hero-1349 .cs-bubbles {
+        /* this scales the children inside of it down. They're all in ems so they pull from the parent font size for their value of em, in this case, the value of em is tied to the viewwidth size and stops growing when the font size is equal to 1em, which it pulls from the nearst parent with a declred font size (which is the html tag, and that tag is 16px by default) */
+        font-size: min(2vw, 0.5em);
+        position: absolute;
+        z-index: -1;
+    }
+    #hero-1349 .cs-bubbles1 {
+        width: 42.5em;
+        height: 45.25em;
+        right: -11.875rem;
+        /* changes to 172 at large desktop */
+        top: 0;
+    }
+    #hero-1349 .cs-bubbles1:before {
+        /* white border bubble */
+        content: "";
+        width: 38.875em;
+        height: 38.875em;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        animation-name: floatAnimation;
+        animation-duration: 7s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    #hero-1349 .cs-bubbles1:after {
+        /* orange bubble */
+        content: "";
+        width: 34.125em;
+        height: 34.125em;
+        background: var(--primary);
+        opacity: 0.8;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        animation-name: floatAnimation2;
+        animation-duration: 10s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    #hero-1349 .cs-bubbles2 {
+        width: 20.625rem;
+        height: 29.75rem;
+        /* changes to 160px at larger desktop */
+        left: -13.75rem;
+        /* removed at larger desktop */
+        bottom: -16.25rem;
+    }
+    #hero-1349 .cs-bubbles2:before {
+        /* white border bubble */
+        content: "";
+        width: 20.625rem;
+        height: 20.625rem;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        bottom: 0;
+        right: 0;
+        animation-name: floatAnimation;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    #hero-1349 .cs-bubbles2:after {
+        /* orange bubble */
+        content: "";
+        width: 16.25rem;
+        height: 16.25rem;
+        background: var(--primary);
+        opacity: 0.8;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2.5rem;
+        z-index: -1;
+        animation-name: floatAnimation2;
+        animation-duration: 14s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+    #hero-1349 .cs-background {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    #hero-1349 .cs-background:before {
+        /* Overlay */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.4;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /* prevents the cursor from interacting with it */
+        pointer-events: none;
+    }
+    #hero-1349 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* makes the top of the image start at the top of the parent */
+        object-position: right top;
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-1349 .cs-container {
+        align-items: flex-start;
+    }
+    #hero-1349 .cs-content {
+        text-align: left;
+        align-items: flex-start;
+    }
+    #hero-1349 .cs-bubbles {
+        font-size: 1em;
+    }
+    #hero-1349 .cs-bubbles1 {
+        /* changes to auto at large desktop */
+        right: -26.75rem;
+    }
+    #hero-1349 .cs-background img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      /* makes the top of the image start at the top of the parent */
+      object-position: top;
+    }
+  }
+  /* Large Desktop - 1300px */
+  @media only screen and (min-width: 81.25rem) {
+    #hero-1349 .cs-bubbles1 {
+        /* 200px - 450px */
+        margin-left: clamp(12.5rem, 20vw, 28.125rem);
+        top: 10.75rem;
+        right: auto;
+        left: 50%;
+    }
+  }
+  /* Large Desktop Parallax Effect - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #hero-1349 .cs-background {
+        background: url("../assets/images/on-computer.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #hero-1349 .cs-background img {
+        display: none;
+    }
+  }
+  /* Larger Desktop - 1800px */
+  @media only screen and (min-width: 112.5rem) {
+    #hero-1349 .cs-bubbles2 {
+        margin-right: 50rem;
+        right: 50%;
+        left: auto;
+        top: 13.125rem;
+        bottom: auto;
+    }
+  }
+  
+  /*-- -------------------------- -->
+  <---       Top Services         -->
+  <--- -------------------------- -*/
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #h-services-81 {
+      /* 40px - 100px */
+      padding: 0 1rem clamp(2.5rem, 7.9vw, 6.25rem) 1rem;
+      position: relative;
+      /* give a higher z index than the hero so it can sit on top */
+      z-index: 10;
+    }
+    #h-services-81 .cs-card-group {
+      width: 100%;
+      max-width: 29.0625rem;
+      margin: 0 auto 0;
+      /* negative margin pulls it up on top of the hero section */
+      /* -46px to -76px - we're calculating whatever clamp is and multiplying by -1
+              to make the value negative since clamp doesn't work with negative values */
+      margin-top: calc(clamp(5rem, 13vw, 4.75rem)*-1);
+      /* 40px - 60px top and bottom, 16px - 60px left & right */
+      padding: clamp(2.5rem, 4.7vw, 3.75rem) clamp(1rem, 4vw, 3.75rem);
+      box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.05);
+      border-top: 8px solid var(--primary);
+      background-color: #fff;
+      /* prevents padding from affecting height and width */
+      box-sizing: border-box;
+    }
+    #h-services-81 .cs-item {
+      list-style: none;
+      margin: 0 auto 2.5rem;
+      width: 100%;
+      max-width: 22.5rem;
+    }
+    #h-services-81 .cs-item:last-of-type {
+      margin-bottom: 0;
+    }
+    #h-services-81 .cs-icon {
+      /* 68px - 88px */
+      width: clamp(4.25rem, 8.8vw, 5.5rem);
+      /* 68px - 88px */
+      height: clamp(4.25rem, 8.8vw, 5.5rem);
+      margin: auto;
+      /* 20px - 24px */
+      margin-bottom: clamp(1.25rem, 5vw, 1.5rem);
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #h-services-81 .cs-icon img {
+      /* 44px - 52px */
+      width: clamp(2.75rem, 5.8vw, 3.25rem);
+      height: auto;
+    }
+    #h-services-81 .cs-title {
+      font-size: 1.25rem;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0 auto 0.5rem;
+      color: var(--headerColor);
+    }
+    #h-services-81 .cs-text {
+      font-size: 1rem;
+      text-align: center;
+      line-height: 1.5em;
+      max-width: 22.5rem;
+      margin: 0 auto;
+      color: var(--bodyTextColor);
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #h-services-81 {
+      padding-bottom: 0;
+    }
+    #h-services-81 .cs-card-group {
+      max-width: 80rem;
+      /* -76px to -320px - we're calculating whatever clamp is and multiplying by -1
+                 to make the value negative since clamp doesn't work with negative values */
+      margin-top: calc(clamp(4.75rem, 8vw, 20rem)*-1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 2.5rem;
+    }
+    #h-services-81 .cs-item {
+      /* Reset margin so it doesn't interfere with flexbox */
+      margin: 0;
+    }
+  }
+  /* Dark Mode */
+  @media only screen and (min-width: 0rem) {
+    body.dark-mode #h-services-81 .cs-card-group {
+      background: var(--medium);
+    }
+    body.dark-mode #h-services-81 .cs-icon {
+      background: var(--darkTint);
+    }
+    body.dark-mode #h-services-81 .cs-title {
+      color: #fff;
+    }
+    body.dark-mode #h-services-81 .cs-text {
+      color: #fff;
+    }
+  }
