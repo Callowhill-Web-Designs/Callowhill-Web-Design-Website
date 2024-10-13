@@ -236,6 +236,9 @@
   #contact-1388 .cs-link:hover {
       text-decoration: underline;
   }
+  #contact-1388 .cs-link.blue {
+    color: #5656FF;
+  }
   #contact-1388 .cs-icon-wrapper {
       width: 3.75rem;
       height: 3.75rem;
