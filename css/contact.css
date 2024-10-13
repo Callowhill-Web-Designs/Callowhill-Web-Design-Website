@@ -236,6 +236,9 @@
   #contact-1388 .cs-link:hover {
       text-decoration: underline;
   }
+  #contact-1388 .cs-link.color {
+    color: var(--primary);
+  }
   #contact-1388 .cs-icon-wrapper {
       width: 3.75rem;
       height: 3.75rem;
@@ -412,6 +415,9 @@
   body.dark-mode #contact-1388 .cs-icon {
       /* makes it white */
       filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #contact-1388 .cs-link.color {
+    color: var(--primary);
   }
   body.dark-mode #contact-1388 .cs-form {
       background-color: var(--medium);
