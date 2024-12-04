@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="536px" height="1920px">
+<svg xmlns="http://www.w3.org/2000/svg" width="1920px" height="536px">
     <defs>
         <filter id="null">
             <feBlend mode="normal" in="SourceGraphic"/>
